@@ -1,0 +1,74 @@
+<div class="main-div">
+    <div class="container main-container">
+        <div class="phone-div">
+            <div class="back-photo-div">
+                <img src="../../assets/Images/photo_outer_1.png" alt="">
+                <img src="../../assets/Images/File (1).jpg" alt="" class="back-image">
+            </div>
+            <div class="front-image-absolute">
+                <div class="front-photo-div">
+                    <img src="../../assets/Images/photo_outer_1.png" alt="">
+                    <img [src]="imgSrc" alt="" class="front-image">
+                </div>
+            </div>
+        </div>
+        <div class="login-div" *ngIf="loginSwitch">
+            <div class="info-div">
+                <form [formGroup]="profileForm">
+                    <div class="logo-div">
+                        <i data-visualcompletion="css-img" aria-label="Instagram" class="insta-img" role="img"></i>
+                    </div>
+                    <input type="text" class="form-control username-input" formControlName="email"
+                        placeholder="Phone number, username, or email">
+                    <input type="text" class="form-control password-input" formControlName="password"
+                        placeholder="Password">
+                    <button class="btn login-btn" (click)="login()">Log in</button>
+                </form>
+                <div class="or-div">
+                    <div class="line-div"></div>
+                    <div class="or-text mx-2">OR</div>
+                    <div class="line-div"></div>
+                </div>
+                <div class="fb-div">
+                    <button class="btn fb-btn" (click)="loginFbClick()">
+                        <span class="fb-img-span"><img src="../../assets/Images/fb_image.png" alt=""
+                                class="fb-image"></span>
+                        <span class="login-fb-text">Log in with Facebook</span>
+                    </button>
+                </div>
+                <a class="forgot-password-link">Forgot password?</a>
+            </div>
+            <div class="signup-div">
+                <p class="signup-text">Don't have an account? <span class="signup-link" routerLink="/sign-up">Sign
+                        up</span></p>
+            </div>
+            <div class="app-div">
+                <div class="get-app-text">
+                    <p class="get-app">Get the app</p>
+                </div>
+                <div class="app-images-div">
+                    <a><img alt="Get it on Google Play" class="app-image"
+                            src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png"></a>
+                    <a><img alt="Get it from Microsoft" class="app-ms-image"
+                            src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="fb-login-div" *ngIf="!loginSwitch">
+            <div class="logo-div">
+                <i data-visualcompletion="css-img" aria-label="Instagram" class="insta-img" role="img"></i>
+            </div>
+            <div class="profile-img-div">
+                <img src=".././../assets/Images/profile.jpg" alt="Profile image" class="profile-img">
+            </div>
+            <div class="continue-btn-div">
+                <button type="button" class="btn continue-btn">Continue as {{fbProfileName}}</button>
+            </div>
+            <div class="switch-account-div">
+                <p>Not {{fbProfileName}}?</p>
+                <p class="switch-account-text" (click)="switchToLogin()">Switch accounts</p>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

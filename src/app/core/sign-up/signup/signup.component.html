@@ -1,0 +1,49 @@
+<div class="main-div">
+    <div class="login-div container">
+        <div class="info-div">
+            <div class="logo-div">
+                <i data-visualcompletion="css-img" aria-label="Instagram" class="insta-img" role="img"></i>
+            </div>
+            <div class="signup-text my-3">
+                <p>Sign up to see photos and videos from your friends.</p>
+            </div>
+            <div class="fb-signup-div">
+                <button class="btn fb-btn"><img src="../../../assets/Images/fbWhite.png" alt="facebook" class="fb-icon">
+                    Log in with Facebook</button>
+            </div>
+            <div class="or-div">
+                <div class="line-div"></div>
+                <div class="or-text mx-2">OR</div>
+                <div class="line-div"></div>
+            </div>
+            <form [formGroup]="signUpForm">
+                <input type="text" class="form-control" placeholder="Mobile number or Email" formControlName="mobile_number_or_email">
+                <input type="text" class="form-control" placeholder="Full Name" formControlName="full_name">
+                <input type="text" class="form-control username-input"
+                    placeholder="Phone number, username, or email" formControlName="mobile_number_or_email_repeat">
+                <input type="text" class="form-control password-input" 
+                    placeholder="Password" formControlName="password">
+                <p class="service-text my-3">People who use our service may have uploaded your contact information to Instagram. <span class="highlight-text">Learn More</span></p>
+                <p class="termsAndConditions">
+                    By signing up, you agree to our <span class="highlight-text">Terms</span> , <span class="highlight-text">Privacy Policy</span> and <span class="highlight-text">Cookies Policy</span> .
+                </p>
+                <button type="submit" class="btn signup-btn" (click)="signUp()">Sign Up</button>
+            </form>
+        </div>
+        <div class="signup-div">
+            <p class="login-text">Have an account? <span class="signup-link" routerLink="">Log in</span></p>
+        </div>
+        <div class="app-div">
+            <div class="get-app-text">
+                <p class="get-app">Get the app</p>
+            </div>
+            <div class="app-images-div">
+                <a><img alt="Get it on Google Play" class="app-image"
+                        src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png"></a>
+                <a><img alt="Get it from Microsoft" class="app-ms-image"
+                        src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png"></a>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
