@@ -20,9 +20,17 @@
                     </div>
                     <input type="text" class="form-control username-input" formControlName="email"
                         placeholder="Phone number, username, or email">
-                    <input type="text" class="form-control password-input" formControlName="password"
-                        placeholder="Password">
-                    <button class="btn login-btn" (click)="login()">Log in</button>
+                        <div class="password-div">
+                            <input [type]="passwordText" class="form-control password-input" 
+                            placeholder="Password" formControlName="password" [(ngModel)]="passwordNg">
+                            <div *ngIf="passwordNg!=''" class="show-div">
+                                <span *ngIf="showPassword" class="show-text" (click)="showPasswordChange('show')">Show</span>
+                                <span *ngIf="!showPassword" class="show-text" (click)="showPasswordChange('hide')">Hide</span>
+                            </div>
+                        </div>
+                    <!-- <input type="password" class="form-control password-input" formControlName="password"
+                        placeholder="Password"> -->
+                    <button class="btn login-btn" (click)="login()" [disabled]="!profileForm.valid">Log in</button>
                 </form>
                 <div class="or-div">
                     <div class="line-div"></div>
@@ -36,7 +44,7 @@
                         <span class="login-fb-text">Log in with Facebook</span>
                     </button>
                 </div>
-                <a class="forgot-password-link">Forgot password?</a>
+                <a class="forgot-password-link" routerLink="/forgot-password">Forgot password?</a>
             </div>
             <div class="signup-div">
                 <p class="signup-text">Don't have an account? <span class="signup-link" routerLink="/sign-up">Sign

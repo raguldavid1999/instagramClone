@@ -27,7 +27,7 @@ input:focus{
 }
 
 .login-div {
-    width: 45%;
+    width: 40%;
     margin-top: 15px;
 }
 
@@ -87,6 +87,7 @@ input:focus{
 
 .fb-image {
     width: 16px;
+    margin-bottom: 4px;
 }
 .fb-div{
     display: flex;
@@ -216,6 +217,18 @@ input:focus{
     cursor: pointer;
     color: rgb(0, 149, 246);
     font-weight: 500;
+}
+.password-div {
+    position: relative;
+}
+
+.show-div {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
 }
 @keyframes fadeIn {
     0% { opacity: 0; }

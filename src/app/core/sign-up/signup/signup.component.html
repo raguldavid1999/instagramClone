@@ -21,13 +21,21 @@
                 <input type="text" class="form-control" placeholder="Full Name" formControlName="full_name">
                 <input type="text" class="form-control username-input"
                     placeholder="Phone number, username, or email" formControlName="mobile_number_or_email_repeat">
-                <input type="text" class="form-control password-input" 
-                    placeholder="Password" formControlName="password">
+
+                <div class="password-div">
+                    <input [type]="passwordText" class="form-control password-input" 
+                    placeholder="Password" formControlName="password" [(ngModel)]="passwordNg">
+                    <div *ngIf="passwordNg!=''" class="show-div">
+                        <span *ngIf="showPassword" class="show-text" (click)="showPasswordChange('show')">Show</span>
+                        <span *ngIf="!showPassword" class="show-text" (click)="showPasswordChange('hide')">Hide</span>
+                    </div>
+                </div>
+                
                 <p class="service-text my-3">People who use our service may have uploaded your contact information to Instagram. <span class="highlight-text">Learn More</span></p>
                 <p class="termsAndConditions">
                     By signing up, you agree to our <span class="highlight-text">Terms</span> , <span class="highlight-text">Privacy Policy</span> and <span class="highlight-text">Cookies Policy</span> .
                 </p>
-                <button type="submit" class="btn signup-btn" (click)="signUp()">Sign Up</button>
+                <button type="submit" class="btn signup-btn" (click)="signUp()" [disabled]="!signUpForm.valid">Sign Up</button>
             </form>
         </div>
         <div class="signup-div">

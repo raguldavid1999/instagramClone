@@ -9,6 +9,9 @@ import { LoginServiceService } from 'src/services/login-service.service';
 })
 export class SignupComponent implements OnInit {
   signUpForm!: FormGroup;
+  passwordNg:any = '';
+  showPassword = true;
+  passwordText = 'password';
   constructor(private apiService: LoginServiceService) { }
 
   ngOnInit(): void {
@@ -26,5 +29,15 @@ export class SignupComponent implements OnInit {
     this.apiService.signUp(payload).subscribe(res=>{
       console.log(res,'Account created successfully')
     })
+  }
+  showPasswordChange(text:any){
+    if(text=='show'){
+      this.showPassword = false;
+      this.passwordText = 'text';
+    }
+    else{
+      this.showPassword = true;
+      this.passwordText = 'password';
+    }
   }
 }

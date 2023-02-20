@@ -26,7 +26,10 @@ export class WelcomeScreenComponent implements OnInit {
     private snackBar: MatSnackBar) { }
   profileForm!: FormGroup;
   fbProfileName = 'rdraguldavid';
-  loginSwitch = false;
+  loginSwitch = true;
+  passwordNg:any = '';
+  showPassword = true;
+  passwordText = 'password';
   ngOnInit(): void {
     this.profileForm = new FormGroup({
       email: new FormControl('', Validators.required),
@@ -70,7 +73,17 @@ export class WelcomeScreenComponent implements OnInit {
     this.loginSwitch = true;
   }
   loginFbClick(){
-    this.loginSwitch = false;
+    this.loginSwitch = false; 
+  }
+  showPasswordChange(text:any){
+    if(text=='show'){
+      this.showPassword = false;
+      this.passwordText = 'text';
+    }
+    else{
+      this.showPassword = true;
+      this.passwordText = 'password';
+    }
   }
 }
 
