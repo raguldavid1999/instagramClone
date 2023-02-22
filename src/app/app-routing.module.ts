@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
 import { SignupComponent } from './core/sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
+import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path:'forgot-password',
     component: ForgotPasswordComponent
+  },
+  {
+    path:'side-nav',
+    component: SideNavBarComponent
   }
 ];
 

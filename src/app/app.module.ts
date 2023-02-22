@@ -12,6 +12,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FooterComponent } from './core//footer/footer/footer.component';
 import { SignupComponent } from './core//sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
+import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/
         WelcomeScreenComponent,
         FooterComponent,
         SignupComponent,
-        ForgotPasswordComponent
+        ForgotPasswordComponent,
+        SideNavBarComponent
     ],
     providers: [
         {
