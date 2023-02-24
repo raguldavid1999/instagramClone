@@ -1,5 +1,20 @@
 <div class="side-nav-main" [ngClass]="collapsed?'sidenav-collapsed':''">
+    <div class="insta-logo-div">
+        <img src="../../../../assets/Images/insta_logo_2.png" alt="" class="insta-logo">
+    </div>
     <div class="side-for-div" *ngFor="let data of navData">
-        
+        <div class="inner-side-nav" [id]="'side'+data.label">
+            <i *ngIf="!clicked" class="icon" [class]="data.icon"></i>
+            <i *ngIf="clicked" class="icon" [class]="data.clickIcon"></i>
+            <p class="side-nav-label">{{data.label}}</p>
+        </div>
+    </div>
+    <div class="profile-div">
+        <img src="../../../../assets/Images/profile.jpg" alt="" class="side-profile">
+        <p class="profile-name">Profile</p>
+    </div>
+    <div class="more-div">
+        <i class="bi bi-list menu-icon"></i>
+        <p class="m-0">More</p>
     </div>
 </div>

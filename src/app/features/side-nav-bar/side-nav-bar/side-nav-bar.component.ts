@@ -9,6 +9,7 @@ import { navbarData } from './nav-data';
 export class SideNavBarComponent implements OnInit {
   collapsed = false;
   navData = navbarData;
+  clicked = false;
   constructor() { }
 
   ngOnInit(): void {
