@@ -13,6 +13,9 @@ import { FooterComponent } from './core//footer/footer/footer.component';
 import { SignupComponent } from './core//sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
 import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
+import { ExploreComponent } from './features/explore/explore.component';
+import { ReelsComponent } from './features/reels/reels.component';
+import { MessagesComponent } from './features/messages/messages.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +24,10 @@ import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-n
         FooterComponent,
         SignupComponent,
         ForgotPasswordComponent,
-        SideNavBarComponent
+        SideNavBarComponent,
+        ExploreComponent,
+        ReelsComponent,
+        MessagesComponent
     ],
     providers: [
         {

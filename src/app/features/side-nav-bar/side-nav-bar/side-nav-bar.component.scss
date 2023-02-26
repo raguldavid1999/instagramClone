@@ -8,11 +8,11 @@
 }
 .icon{
     margin-top: 30px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .side-nav-label{
     margin: 0;
-    font-size: 18px;
+    font-size: 17px;
     margin-left: 10px;
     margin-top: 30px;
 }
@@ -48,4 +48,12 @@
     display: flex;
     align-items: center;
     margin-left: 20px;
+}
+.side-for-div div{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.active{
+    font-weight: 600;
 }

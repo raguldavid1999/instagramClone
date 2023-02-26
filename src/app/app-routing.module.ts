@@ -21,6 +21,18 @@ const routes: Routes = [
   {
     path:'side-nav',
     component: SideNavBarComponent
+  },
+  {
+    path:'explore',
+    component: SideNavBarComponent
+  },
+  {
+    path:'reels',
+    component: SideNavBarComponent
+  },
+  {
+    path:'messages',
+    component: SideNavBarComponent
   }
 ];
 
