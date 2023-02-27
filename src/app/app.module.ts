@@ -16,6 +16,7 @@ import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-n
 import { ExploreComponent } from './features/explore/explore.component';
 import { ReelsComponent } from './features/reels/reels.component';
 import { MessagesComponent } from './features/messages/messages.component';
+import { ProfileComponent } from './features/profile/profile.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { MessagesComponent } from './features/messages/messages.component';
         SideNavBarComponent,
         ExploreComponent,
         ReelsComponent,
-        MessagesComponent
+        MessagesComponent,
+        ProfileComponent
     ],
     providers: [
         {

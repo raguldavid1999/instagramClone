@@ -4,6 +4,7 @@ import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.com
 import { SignupComponent } from './core/sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
 import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
+import { ProfileComponent } from './features/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   },
   {
     path:'messages',
+    component: SideNavBarComponent
+  },
+  {
+    path:'profile',
     component: SideNavBarComponent
   }
 ];

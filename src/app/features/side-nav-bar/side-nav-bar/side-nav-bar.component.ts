@@ -14,6 +14,7 @@ export class SideNavBarComponent implements OnInit {
   notificationClick = false;
   searchClick = false;
   createClick = false;
+  createAndProfileClick = false;
   constructor(
     public router: Router
   ) { }
@@ -21,33 +22,34 @@ export class SideNavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  sideClick(name:any){
-    this.collapsed = !this.collapsed;
-    if(name=='search'){
-      // this.collapsed = !this.collapsed;
+  sideClick(name: any) {
+    if (name == 'search') {
       this.searchClick = !this.searchClick;
-      this.notificationClick = false;
-      this.createClick = false;
+      if (this.notificationClick) {
+        this.notificationClick = false;
+      }
+      else {
+        this.collapsed = !this.collapsed;
+      }
     }
-    else if(name=='notification'){
-      // this.collapsed = !this.collapsed;
-      this.searchClick = false;
+    else if (name == 'notify') {
       this.notificationClick = !this.notificationClick;
-      this.createClick = false;
+      if (this.searchClick) {
+        this.searchClick = false;
+      }
+      else {
+        this.collapsed = !this.collapsed;
+      }
     }
-    else if(name=='create'){
-      this.collapsed = !this.collapsed;
-      this.searchClick = false;
-      this.notificationClick = false;
+    else if(name == 'create'){
       this.createClick = !this.createClick;
+      // this.createAndProfileClick = !this.createAndProfileClick;
     }
     else{
-      this.collapsed = !this.collapsed;
-      this.searchClick = false;
+      this.collapsed = false;
+      this.searchClick =false;
       this.notificationClick = false;
-      this.createClick = false;
-      // this.collapsed = false;
-      // this.clicked = true;
     }
+    
   }
 }

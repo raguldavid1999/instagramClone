@@ -3,10 +3,10 @@
         <img src="../../../../assets/Images/insta_logo_2.png" alt="" class="insta-logo">
     </div>
     <div class="side-for-div">
-        <div class="home-div" routerLink="/side-nav" routerLinkActive="active" (click)="sideClick('home')">
-            <i class="bi bi-house-door icon" *ngIf="router.url!='/side-nav' || collapsed"></i>
-            <i class="bi bi-house-door-fill icon" *ngIf="router.url=='/side-nav' && !collapsed"></i>
-            <p class="side-nav-label" *ngIf="!collapsed">Home</p>
+        <div class="home-div" (click)="sideClick('home')" routerLink="/side-nav" routerLinkActive="active">
+            <i class="bi bi-house-door icon" *ngIf="router.url!='/side-nav' || collapsed || createAndProfileClick"></i>
+            <i class="bi bi-house-door-fill icon" *ngIf="router.url=='/side-nav' && !collapsed && !createAndProfileClick"></i>
+            <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':router.url=='/side-nav' && !collapsed && !createAndProfileClick?'500':'400'}">Home</p>
         </div>
         <div class="search-div" (click)="sideClick('search')">
             <i class="bi bi-search-heart icon" *ngIf="!searchClick"></i>
@@ -14,21 +14,21 @@
             <p class="side-nav-label" *ngIf="!collapsed">Search</p>
         </div>
         <div class="explore-div" routerLink="/explore" routerLinkActive="active" (click)="sideClick('explore')">
-            <i class="bi bi-compass icon" *ngIf="router.url != '/explore' || collapsed"></i>
-            <i class="bi bi-compass-fill icon" *ngIf="router.url == '/explore' && !collapsed"></i>
-            <p class="side-nav-label" *ngIf="!collapsed">Explore</p>
+            <i class="bi bi-compass icon" *ngIf="router.url != '/explore' || collapsed || createAndProfileClick"></i>
+            <i class="bi bi-compass-fill icon" *ngIf="router.url == '/explore' && !collapsed && !createAndProfileClick"></i>
+            <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':router.url=='/explore' && !collapsed && !createAndProfileClick?'500':'400'}">Explore</p>
         </div>
         <div class="reels-div" routerLink="/reels" routerLinkActive="active" (click)="sideClick('reels')">
-            <i class="bi bi-camera-video icon" *ngIf="router.url != '/reels' || collapsed"></i>
-            <i class="bi bi-camera-video-fill icon" *ngIf="router.url == '/reels' && !collapsed"></i>
-            <p class="side-nav-label" *ngIf="!collapsed">Reels</p>
+            <i class="bi bi-camera-video icon" *ngIf="router.url != '/reels' || collapsed || createAndProfileClick"></i>
+            <i class="bi bi-camera-video-fill icon" *ngIf="router.url == '/reels' && !collapsed && !createAndProfileClick"></i>
+            <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':router.url=='/reels' && !collapsed && !createAndProfileClick?'500':'400'}">Reels</p>
         </div>
-        <div class="messages-div" routerLink="/messages" routerLinkActive="active" (click)="sideClick('messages')">
-            <i class="bi bi-chat-heart icon" *ngIf="router.url != '/messages' || collapsed"></i>
-            <i class="bi bi-chat-heart-fill icon" *ngIf="router.url == '/messages' && !collapsed"></i>
-            <p class="side-nav-label" *ngIf="!collapsed">Messages</p>
+        <div class="messages-div" routerLink="/messages" routerLinkActive="active" (click)="sideClick('message')">
+            <i class="bi bi-chat-heart icon" *ngIf="router.url != '/messages' || collapsed || createAndProfileClick"></i>
+            <i class="bi bi-chat-heart-fill icon" *ngIf="router.url == '/messages' && !collapsed && !createAndProfileClick"></i>
+            <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':router.url=='/messages' && !collapsed && !createAndProfileClick?'500':'400'}">Messages</p>
         </div>
-        <div class="notification-div" (click)="sideClick('notification')">
+        <div class="notification-div" (click)="sideClick('notify')">
             <i class="bi bi-heart icon" *ngIf="!notificationClick"></i>
             <i class="bi bi-heart-fill icon" *ngIf="notificationClick"></i>
             <p class="side-nav-label" *ngIf="!collapsed">Notifications</p>
@@ -39,8 +39,8 @@
             <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':!collapsed && createClick?'500':'400'}">Create</p>
         </div>
     </div>
-    <div class="profile-div">
-        <img src="../../../../assets/Images/profile.jpg" alt="" class="side-profile">
+    <div class="profile-div" routerLink="/profile">
+        <img src="../../../../assets/Images/profile.jpg" routerLink="/profile" routerLinkActive="profile-active" alt="" class="side-profile">
         <p class="profile-name" *ngIf="!collapsed">Profile</p>
     </div>
     <div class="more-div">
