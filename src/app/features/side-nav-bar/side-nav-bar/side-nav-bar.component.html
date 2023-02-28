@@ -39,7 +39,7 @@
             <p class="side-nav-label" *ngIf="!collapsed" [ngStyle]="{'font-weight':!collapsed && createClick?'500':'400'}">Create</p>
         </div>
     </div>
-    <div class="profile-div" routerLink="/profile">
+    <div class="profile-div" routerLink="/profile" routerLinkActive="profile-name-active">
         <img src="../../../../assets/Images/profile.jpg" routerLink="/profile" routerLinkActive="profile-active" alt="" class="side-profile">
         <p class="profile-name" *ngIf="!collapsed">Profile</p>
     </div>
