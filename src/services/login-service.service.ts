@@ -14,5 +14,8 @@ export class LoginServiceService {
   signUp(payload:any){
     return this.http.post<any>('http://127.0.0.1:8000/insta/signup',payload)
   }
+  sampleFunction(){
+    return this.http.get<any>('http://127.0.0.1:3000/sample');
+  }
 
 }

@@ -85,6 +85,11 @@ export class WelcomeScreenComponent implements OnInit {
       this.passwordText = 'password';
     }
   }
+  onSampleClick(){
+    this.registerApi.sampleFunction().subscribe(res=>{
+      console.log(res,'sample response')
+    })
+  }
 }
 
 
