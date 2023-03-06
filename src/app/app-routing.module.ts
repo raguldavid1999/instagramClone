@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
 import { SignupComponent } from './core/sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
 import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
+import { SampleComponent } from './core/sample/sample/sample.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path:'profile',
     component: SideNavBarComponent
+  },
+  {
+    path:'sample',
+    loadChildren:()=> import('./core/sample/sample.module').then(m=>m.SampleModule)
   }
 ];
 

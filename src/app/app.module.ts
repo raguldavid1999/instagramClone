@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
 import { BrowserAnimationsModule} from "@angular/platform-browser/animations"
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/interceptor';
@@ -17,6 +16,7 @@ import { ExploreComponent } from './features/explore/explore.component';
 import { ReelsComponent } from './features/reels/reels.component';
 import { MessagesComponent } from './features/messages/messages.component';
 import { ProfileComponent } from './features/profile/profile.component';
+import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
 
 @NgModule({
     declarations: [
