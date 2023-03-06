@@ -11,12 +11,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FooterComponent } from './core//footer/footer/footer.component';
 import { SignupComponent } from './core//sign-up/signup/signup.component';
 import { ForgotPasswordComponent } from './core/forgot-password/forgot-password/forgot-password.component';
-import { SideNavBarComponent } from './features/side-nav-bar/side-nav-bar/side-nav-bar.component';
+import { SideNavBarComponent } from './features/home/home/side-nav-bar/side-nav-bar.component';
 import { ExploreComponent } from './features/explore/explore.component';
 import { ReelsComponent } from './features/reels/reels.component';
 import { MessagesComponent } from './features/messages/messages.component';
 import { ProfileComponent } from './features/profile/profile.component';
 import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.component';
+import { HomeModule } from './features/home/home.module';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,6 @@ import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.com
         FooterComponent,
         SignupComponent,
         ForgotPasswordComponent,
-        SideNavBarComponent,
         ExploreComponent,
         ReelsComponent,
         MessagesComponent,
@@ -46,6 +46,7 @@ import { WelcomeScreenComponent } from './core/welcome-screen/welcome-screen.com
         HttpClientModule,
         ReactiveFormsModule,
         MatSnackBarModule,
-    ]
+        HomeModule
+    ],
 })
 export class AppModule { }

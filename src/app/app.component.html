@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<div class="total-div">
+    <div class="side-div" *ngIf="isAuthenticate">
+        <app-side-nav-bar></app-side-nav-bar>
+    </div>
+    <div class="main-div" [ngStyle]="{'width':isAuthenticate?'80%':'100%'}">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

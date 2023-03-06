@@ -46,6 +46,7 @@ export class SideNavBarComponent implements OnInit {
       // this.createAndProfileClick = !this.createAndProfileClick;
     }
     else{
+      this.router.navigate([`/${name}`])
       this.collapsed = false;
       this.searchClick =false;
       this.notificationClick = false;

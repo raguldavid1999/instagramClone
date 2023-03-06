@@ -1,4 +1,4 @@
-<div class="main-div">
+<div class="main-div" *ngIf="!isAuthenticate">
     <div class="container main-container">
         <div class="phone-div">
             <div class="back-photo-div">
@@ -79,4 +79,8 @@
         </div>
     </div>
     <app-footer></app-footer>
+</div>
+
+<div class="home-div" *ngIf="isAuthenticate">
+    <app-home></app-home>
 </div>

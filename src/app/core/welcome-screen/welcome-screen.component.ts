@@ -30,6 +30,7 @@ export class WelcomeScreenComponent implements OnInit {
   passwordNg:any = '';
   showPassword = true;
   passwordText = 'password';
+  isAuthenticate = false;
   ngOnInit(): void {
     this.profileForm = new FormGroup({
       email: new FormControl('', Validators.required),
@@ -87,6 +88,7 @@ export class WelcomeScreenComponent implements OnInit {
   }
   onSampleClick(){
     this.registerApi.sampleFunction().subscribe(res=>{
+      localStorage.setItem('access_token',res.token);
       console.log(res,'sample response')
     })
   }
